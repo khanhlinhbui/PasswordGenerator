@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+const specialcharacter= " !\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~" // create string
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // create string
+const lowercase = "abcdefghijklmnopqrstuvwxyz";  // create string
+const numeric = "1234567890";  // create string
 // Define generarePassword function
 function generatePassword(){
   const result = parseInt(prompt("What do you the password length to be?"),10); //Modified and converted Prompt's content 
