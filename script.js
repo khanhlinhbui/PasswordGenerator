@@ -8,9 +8,14 @@ function generatePassword(){
 // set character limit
   if (result >= 8 && result<= 128) { 
     const confirm_lowercase= confirm("Click OK if you want to include one or more lowercase in the password"); //confirm condition
-    const confirm_upper= confirm("Click OK if you want to include one or more uppercase in the password"); //confirm condition
+    const confirm_uppercase= confirm("Click OK if you want to include one or more uppercase in the password"); //confirm condition
     const confirm_numeric= confirm("Click OK if you want to include one or more numeric in the password"); //confirm condition
     const confirm_specialcharacter= confirm("Click OK if you want to include one or more special characters in the password"); //confirm condition
+    if (!confirm_lowercase && !confirm_uppercase && !confirm_numeric && !confirm_specialcharacter){  // If all option are false(denied) will be alert
+      alert("Must confirm at least ONE condition");
+      return null;
+    } 
+
   } else if (Number.isNaN(result)){
     alert("You must enter a number"); // alert variable type must be numeric
     return null;
