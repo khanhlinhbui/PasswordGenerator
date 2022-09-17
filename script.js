@@ -18,6 +18,7 @@ function generatePassword(){
       alert("Must confirm at least ONE condition! Please try again.");
       return null;
     } 
+    // creare a local password variable and store possible character to use for the actual password
     let password = "";
     if (confirm_lowercase) {
       password += lowercase;
@@ -31,9 +32,13 @@ function generatePassword(){
     if (confirm_specialcharacter) {
       password += specialcharacter;
     }
+    random_password = Math.floor(Math.random() * password.length); // randomly generate possible value for password
+    return password.charAt(random_password); // return password
+
   } else if (Number.isNaN(result)) { 
     alert("You must enter a number. Please try again"); // alert variable type must be numeric
     return null;
+
   } else {
     alert("Password length must have at least 8 characters and no more than 128 characters. Please try again."); // alert not in range 
     return null; 
