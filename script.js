@@ -32,7 +32,7 @@ function generatePassword(){
     if (confirm_specialcharacter) {
       password += specialcharacter;
     }
-    random_password = Math.floor(Math.random() * password.length); // randomly generate possible value for password
+    random_password = Math.floor(Math.random() * password.length()); // randomly generate possible value for password
     return password.charAt(random_password); // return password
 
   } else if (Number.isNaN(result)) { 
