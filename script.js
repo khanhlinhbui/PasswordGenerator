@@ -32,11 +32,11 @@ function generatePassword(){
     if (confirm_specialcharacter) {
       password += specialcharacter;
     }
-    random_password_interval = Math.floor(Math.random() * parseInt(password.length,10)); // randomly generate possible value for password
-    let random_password = "";
+    random_password_interval = Math.floor(Math.random() * parseInt(password.length,10)); // Math.random will choose random 1 integer within "password" variabl array of index
+    let random_password = ""; // create variable to hold random character 
     for (let i=0; i<result;i++) {
-       random_password += password.charAt(random_password_interval);
-       random_password_interval = Math.floor(Math.random()* parseInt(password.length),10); 
+       random_password += password.charAt(random_password_interval);  // 'random character' hold the character of the corresponding index was chosen from line 35
+       random_password_interval = Math.floor(Math.random()* parseInt(password.length),10); // the index will choose random another index to generate character.
       
       console.log(random_password)
     }
