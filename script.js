@@ -32,8 +32,16 @@ function generatePassword(){
     if (confirm_specialcharacter) {
       password += specialcharacter;
     }
-    random_password = Math.floor(Math.random() * password.length); // randomly generate possible value for password
-    return password.charAt(random_password); // return password
+    random_password_interval = Math.floor(Math.random() * parseInt(password.length,10)); // randomly generate possible value for password
+    let random_password = "";
+    for (let i=0; i<result;i++) {
+       random_password += password.charAt(random_password_interval);
+       random_password_interval = Math.floor(Math.random()* parseInt(password.length),10); 
+      
+      console.log(random_password)
+    }
+    
+    return random_password; // return password
 
   } else if (Number.isNaN(result)) { 
     alert("You must enter a number. Please try again"); // alert variable type must be numeric
